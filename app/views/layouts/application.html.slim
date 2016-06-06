@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title
+      AsianJobs
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    header
+      .nav
+        = link_to "Asian Jobs", root_path, class: "navbar-brand"
+        p.navbar-text
+          | Alpha ver.1
+      nav.navbar.navbar-default
+        ul.nav.navbar-nav.pull-right
+          li
+            = link_to I18n.t('users.signup'), root_path
+          li
+            = link_to I18n.t('users.login'), root_path
+
+    p.notice
+      = notice
+    p.alert
+      = alert
+    .container
+      = yield
+
+    footer.footer
+      p This is a footer
+      = "Tsubasa.co"

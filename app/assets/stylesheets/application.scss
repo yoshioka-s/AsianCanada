@@ -1,0 +1,64 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+$navbar-default-bg: #fb322c;
+$navbar-default-color: #fff;
+$navbar-default-link-color: #fff;
+$navbar-default-brand-color: #fb322c;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body {padding-left: 20px;}
+
+* {
+ font-family: 'YuGothic', 'Yu Gothic', '游ゴシック', sans-serif;
+}
+
+h1{
+ font-size: $font-size-base * 1.6;
+}
+
+h2{
+ font-size: $font-size-base * 1.4;
+}
+
+h3, h4, h5, h6{
+ font-size: $font-size-base * 1.0;
+}
+
+a.btn{
+ color: #fff;
+}
+
+.panel .btn{
+ margin-right: 10px;
+}
+
+.panel-heading a{
+ color: white;
+}
+
+.label{
+ vertical-align: text-top;
+ margin-right: 5px;
+}
+a.navbar-brand {
+  color: $navbar-default-brand-color;
+}
+ul {
+  list-style-type: none;
+}
+footer {
+  margin-top: 200px;
+}
