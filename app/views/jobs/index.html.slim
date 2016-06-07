@@ -1,12 +1,13 @@
 h1 Listing jobs
 
-table
+table.table.table-striped
   thead
     tr
       th Title
       th Description
       th Employer
       th Wage
+      th Category
       th
       th
       th
@@ -18,6 +19,7 @@ table
         td = job.description
         td = job.employer
         td = job.wage
+        td = job.category.name
         td = link_to 'Show', job
         td = link_to 'Edit', edit_job_path(job)
         td = link_to 'Destroy', job, data: {:confirm => 'Are you sure?'}, :method => :delete

@@ -13,8 +13,8 @@
     = f.label :description
     = f.text_area :description
   .field
-    = f.label :employer
-    = f.text_field :employer
+    = f.label :category
+    = f.collection_select(:category, Category.all, :id, :name)
   .field
     = f.label :wage
     = f.number_field :wage

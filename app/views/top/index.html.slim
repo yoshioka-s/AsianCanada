@@ -4,23 +4,16 @@
       .panel-heading Categories
       .panel-body
         ul
-          li = link_to "#" do
-            span.glyphicon.glyphicon-tag
-            = " Server"
-          li = link_to "#" do
-            span.glyphicon.glyphicon-tag
-            = " Kichen"
-          li = link_to "#" do
-            span.glyphicon.glyphicon-tag
-            = " Web"
-            
+          - @categories.each do |category|
+            li = link_to category do
+              span.glyphicon.glyphicon-tag
+              = " #{ category.name }"
   .new-posts.col-md-8
     .panel.panel-default
       .panel-heading New Job Posts
       .panel-body
-        .panel.panel-info
-          .panel-heading New Job Title
-          .panel-body Job Description
-        .panel.panel-info
-          .panel-heading New Job Title
-          .panel-body Job Description
+        - @jobs.each do |job|
+          .panel.panel-info
+            .panel-heading = link_to job.title, job
+            .panel-body = job.description
+        
