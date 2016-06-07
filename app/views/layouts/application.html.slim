@@ -15,9 +15,9 @@ html
       nav.navbar.navbar-default
         ul.nav.navbar-nav.pull-right
           li
-            = link_to I18n.t('users.signup'), root_path
+            = link_to I18n.t('users.signup'), new_user_registration_path
           li
-            = link_to I18n.t('users.login'), root_path
+            = link_to I18n.t('users.login'), new_user_session_path
 
     p.notice
       = notice
