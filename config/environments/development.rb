@@ -17,7 +17,19 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   # For devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
+  config.action_mailer.delivery_method = :smtp # to send real email
+  # config.action_mailer.delivery_method = :test  # not to send real email
+  config.action_mailer.smtp_settings = {
+    address:               'localhost',
+    # address:               ENV['EMAIL_ADDRESS'],
+    port:      	           1025,
+    # port:      	           ENV['EMAIL_PORT'],
+    domain:                ENV['EMAIL_DOMAIN'],
+    user_name:             ENV['EMAIL'],
+    password:              ENV['EMAIL_PASSWORD'],
+    authentication:        ENV['EMAIL_AUTH'],
+    enable_starttls_auto:  true
+  }
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

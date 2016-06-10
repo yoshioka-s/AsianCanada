@@ -59,4 +59,17 @@ footer {
   margin-top: 200px;
   background-color: #8e2222;
   color: #FFFFFF;
+  a {
+    color: #FFFFFF;
+    :hover {
+      color: #AAAAAA;
+    }
+  }
+}
+.form-group {
+  min-height: 50px;
+}
+
+.form-group label.control-label {
+  margin-top: 5px;
 }

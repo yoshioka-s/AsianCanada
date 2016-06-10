@@ -6,6 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+if Rails.env.development? || Rails.env.test?
+  # read setting file instead of env variables
+  ENV.update YAML.load_file('config/settings.yml')[Rails.env] rescue {}
+end
+
 module AsianJobs
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

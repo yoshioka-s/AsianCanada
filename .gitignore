@@ -17,3 +17,7 @@
 /tmp
 
 .ruby-version
+
+/config/secrets.yml
+/config/settings.yml
+squasher

@@ -14,10 +14,14 @@ html
           | Alpha ver.1
       nav.navbar.navbar-default
         ul.nav.navbar-nav.pull-right
-          li
-            = link_to I18n.t('users.signup'), new_user_registration_path
-          li
-            = link_to I18n.t('users.login'), new_user_session_path
+          - if user_signed_in?
+            li = link_to 'test', root_path
+            li = link_to t('users.logout'), destroy_user_session_path, method: :delete
+          - else
+            li = link_to t('users.signup'), new_user_registration_path
+            li = link_to t('users.login'), new_user_session_path
+          
+          end
 
     p.notice
       = notice
@@ -27,5 +31,10 @@ html
       = yield
 
     footer.footer
-      p This is a footer
-      = "Tsubasa.co"
+      table.table
+        tr
+          td = link_to "Contact Us", '#'
+          td = link_to 'Terms & Conditions', '#'
+        tr
+          td = link_to 'About Us', '#'
+          td = link_to 'Careers', '#'
