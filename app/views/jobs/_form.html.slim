@@ -6,16 +6,21 @@
         - @job.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :category
-    = f.collection_select(:category, Category.all, :id, :name)
-  .field
-    = f.label :wage
-    = f.number_field :wage
-  .actions = f.submit
+  .row
+    .form-group
+      = f.label :title, class: 'control-label col-sm-2'
+      .col-sm-10
+        = f.text_field :title, class: "form-control"
+    .form-group
+      = f.label :description, class: 'control-label col-sm-2'
+      .col-sm-10
+        = f.text_area :description, class: "form-control"
+    .form-group
+      = f.label :category_id, class: 'control-label col-sm-2'
+      .col-sm-10
+        = f.collection_select :category_id, Category.all, :id, :name, class: "form-control" 
+    .form-group
+      = f.label :wage, class: 'control-label col-sm-2'
+      .col-sm-10
+        = f.number_field :wage, class: "form-control"
+    .actions = f.submit 'Update', class: "btn btn-info"
