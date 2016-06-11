@@ -20,5 +20,7 @@ On production mode, you need to configure environment variables below.
 - EMAIL_PORT: your email port
 - EMAIL_DOMAIN: your email domain
 
+Also, You will need [SendGrid](https://elements.heroku.com/addons/sendgrid) addon to sned emails if you are deploying on heroku.
+
 ## Development
 On development mode, we use MailCatcher so we can check sent emails at [localhost:1080](http://localhost:1080/).
