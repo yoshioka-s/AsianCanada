@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable
-  enum role: { admin: 0, employer: 1, job_seeker: 2 }
+  enum role: { admin: 0, employer: 1, seeker: 2 }
   has_many :jobs
 end

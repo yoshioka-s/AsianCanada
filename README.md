@@ -24,3 +24,7 @@ Also, You will need [SendGrid](https://elements.heroku.com/addons/sendgrid) addo
 
 ## Development
 On development mode, we use MailCatcher so we can check sent emails at [localhost:1080](http://localhost:1080/).
+
+## jobs
+- term
+- address
