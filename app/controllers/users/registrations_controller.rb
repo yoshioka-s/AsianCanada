@@ -6,6 +6,10 @@ before_filter :configure_sign_up_params, only: [:create]
   # def new
   #   super
   # end
+  # GET /employer/sign_up
+  def new_employer
+    new
+  end
 
   # POST /resource
   # def create
@@ -41,7 +45,7 @@ before_filter :configure_sign_up_params, only: [:create]
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
     devise_parameter_sanitizer.for(:sign_up) do |u|
-      u.permit(:username, :email, :password, :password_confirmation)
+      u.permit(:username, :email, :password, :password_confirmation, :role)
     end
   end
 

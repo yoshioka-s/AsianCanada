@@ -14,7 +14,7 @@ html
       nav.navbar.navbar-default
         ul.nav.navbar-nav.pull-right
           - if user_signed_in?
-            li = link_to 'test', root_path
+            li = link_to 'test', edit_user_registration_path
             li = link_to t('users.logout'), destroy_user_session_path, method: :delete
           - else
             li = link_to t('users.signup'), new_user_registration_path

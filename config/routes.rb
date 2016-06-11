@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {
    :registrations => 'users/registrations'
   }
+  devise_scope :user do
+    get "employer/sign_up" => "users/registrations#new_employer"
+  end
   resources :jobs
   get 'top/index'
 
